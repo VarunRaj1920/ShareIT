@@ -49,8 +49,8 @@ Follow these steps to run the project on your local machine:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/code-share-platform.git
-   cd code-share-platform
+   git clone https://github.com/VarunRaj1920/ShareIT.git
+   cd ShareIT
    ```
 
 2. **Install Dependencies:**
