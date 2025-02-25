@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset and typography */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F7FAFC; /* Tailwind's bg-gray-100 equivalent */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main container styling for the app card */
+.container {
+  @apply max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-5;
+}
+
+/* Save button styling with interactive hover and shadow effects */
+.save-button {
+  @apply w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow transition-all;
+}
+
+/* CodeMirror dark styling overrides (using Dracula theme) */
+.CodeMirror {
+  height: 100% !important;
+  background-color: #282a36; /* Dark background */
+  color: #f8f8f2; /* Light text */
+}
+
+/* Gutter (line numbers) styling for dark theme */
+.CodeMirror-gutters {
+  background-color: #44475a;
+  color: #6272a4;
+  border: none;
+}
+
+/* Toast popup styling for "Code saved!" message */
+.toast {
+  @apply fixed top-5 right-5 bg-green-500 text-white p-4 rounded-lg shadow-lg transition-opacity duration-300;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast:hover {
+  @apply shadow-2xl;
+}
